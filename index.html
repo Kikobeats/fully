@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Fully, Fulltext DSL search</title>
+  <link href="dist/vendor/spectre.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="dist/vendor/style.css">
+  <link rel="stylesheet" type="text/css" href="dist/fully.css">
+</head>
+
+<body class="text-center">
+  <div id="content-header">
+    <h3><span>Fully</span> Fulltext DSL Search</h3>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-3" viewBox="0 0 40 41">
+    <path d="M26.51 28.573c-2.803 2.34-6.412 3.748-10.35 3.748C7.236 32.32 0 25.087 0 16.16 0 7.236 7.235 0 16.16 0c8.926 0 16.16 7.235 16.16 16.16 0 4.213-1.61 8.048-4.25 10.925L40 39.015l-1.524 1.524L26.51 28.572zm-10.35 2.132c8.033 0 14.545-6.512 14.545-14.544S24.193 1.617 16.16 1.617 1.617 8.128 1.617 16.16c0 8.033 6.512 14.545 14.545 14.545z"
+    fill-rule="evenodd" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-1" viewBox="0 0 20 20">
+    <path d="M9.408 10L.296.888 0 .592.592 0l.296.296L10 9.408 19.112.296 19.408 0 20 .592l-.296.296L10.592 10l9.112 9.112.296.296-.592.592-.296-.296L10 10.592.888 19.704.592 20 0 19.408l.296-.296L9.408 10z" fill-rule="evenodd" />
+  </symbol>
+</svg>
+
+<form action="void(0);" novalidate="novalidate" class="searchbox sbx-custom">
+  <div role="search" class="sbx-custom__wrapper">
+    <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input">
+    <button type="submit" title="Submit your search query." class="sbx-custom__submit">
+      <svg role="img" aria-label="Search">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-search-3"></use>
+      </svg>
+    </button>
+    <button type="reset" title="Clear the search query." class="sbx-custom__reset">
+      <svg role="img" aria-label="Reset">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-1"></use>
+      </svg>
+    </button>
+  </div>
+</form>
+<!--Js: focus search input after reset-->
+<script type="text/javascript">
+  //<![CDATA[
+           document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
+             this.parentNode.querySelector('input').focus();
+           });
+
+          //]]>
+</script>
+
+
+</body>
+</html>

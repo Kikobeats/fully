@@ -1,0 +1,27 @@
+{
+  "name": "fully",
+  "description": "Fulltext search DSL",
+  "homepage": "https://github.com/Kikobeats/fully",
+  "version": "0.0.0",
+  "main": "dist/fully.js",
+  "authors": [
+    {
+      "email": "josefrancisco.verdu@gmail.com",
+      "name": "Kiko Beats",
+      "url": "https://github.com/Kikobeats"
+    }
+  ],
+  "repository": "Kikobeats/fully",
+  "bugs": {
+    "url": "https://github.com/Kikobeats/fully/issues"
+  },
+  "keywords": [],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}

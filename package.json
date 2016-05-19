@@ -1,0 +1,50 @@
+{
+  "name": "fully",
+  "description": "Fulltext search DSL",
+  "homepage": "https://github.com/Kikobeats/fully",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/fully.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/fully/issues"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "browser-sync": "latest",
+    "browserify": "latest",
+    "coffee-script": "latest",
+    "coffeeify": "latest",
+    "git-dirty": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-header": "latest",
+    "gulp-shorthand": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "mocha": "latest",
+    "should": "latest",
+    "standard": "latest",
+    "vinyl-source-buffer": "latest"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "standard lib",
+    "pretest": "npm run lint",
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
