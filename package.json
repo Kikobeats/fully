@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/fully/issues"
   },
+  "files": [
+    "dist/fully.js",
+    "dist/fully.css"
+  ],
   "keywords": [],
   "devDependencies": {
     "browser-sync": "latest",
@@ -36,9 +40,6 @@
     "should": "latest",
     "standard": "latest",
     "vinyl-source-buffer": "latest"
-  },
-  "engines": {
-    "node": ">= 4"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
