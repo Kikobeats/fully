@@ -2,7 +2,7 @@
   "name": "fully",
   "description": "Fulltext search DSL",
   "homepage": "https://github.com/Kikobeats/fully",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "author": {
     "name": "Kiko Beats",
@@ -16,10 +16,6 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/fully/issues"
   },
-  "files": [
-    "dist/fully.js",
-    "dist/fully.css"
-  ],
   "keywords": [],
   "devDependencies": {
     "browser-sync": "latest",
@@ -41,6 +37,10 @@
     "standard": "latest",
     "vinyl-source-buffer": "latest"
   },
+  "files": [
+    "dist/fully.css",
+    "dist/fully.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "standard lib",

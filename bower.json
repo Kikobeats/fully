@@ -2,7 +2,7 @@
   "name": "fully",
   "description": "Fulltext search DSL",
   "homepage": "https://github.com/Kikobeats/fully",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/fully.js",
   "authors": [
     {
@@ -11,7 +11,10 @@
       "url": "https://github.com/Kikobeats"
     }
   ],
-  "repository": "Kikobeats/fully",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/fully.git"
+  },
   "bugs": {
     "url": "https://github.com/Kikobeats/fully/issues"
   },
