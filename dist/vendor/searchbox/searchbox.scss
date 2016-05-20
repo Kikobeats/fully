@@ -1,3 +1,8 @@
+$search-width: 640px;
+$size: 16px;
+
 @import 'src/helpers';
 @import 'src/main';
-@import 'src/searchbox';
+@import 'src/search';
+@import 'src/font';
+@import 'src/slack-tweaks';
