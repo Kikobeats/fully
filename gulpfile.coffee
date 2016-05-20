@@ -1,6 +1,7 @@
 'use strict'
 
 gulp        = require 'gulp'
+sass        = require 'gulp-sass'
 gutil       = require 'gulp-util'
 concat      = require 'gulp-concat'
 header      = require 'gulp-header'
@@ -21,6 +22,9 @@ dist =
   folder   : 'dist'
 
 src =
+  sass:
+    main   : 'dist/vendor/searchbox/searchbox.scss'
+    files  : ['dist/vendor/searchbox/**/**']
   js       : 'src/fully.js'
   css      : 'src/fully.css'
 
@@ -32,6 +36,18 @@ banner = [ "/**"
            " * @license <%= pkg.license %>"
            " */"
            "" ].join("\n")
+
+gulp.task 'sass', ->
+  gulp.src src.sass.main
+  .pipe sass().on 'error', gutil.log
+  .pipe concat 'searchbox.css'
+  .pipe prefix()
+  .pipe strip
+    all: true
+  .pipe shorthand()
+  .pipe cssmin()
+  .pipe header banner, pkg: pkg
+  .pipe gulp.dest 'dist/vendor/searchbox'
 
 gulp.task 'css', ->
   gulp.src src.css
@@ -61,7 +77,10 @@ gulp.task 'server', ->
   return
 
 gulp.task 'build', ['css', 'js']
+gulp.task 'build-vendor', ['sass']
+
 gulp.task 'default', ->
-  gulp.start ['build', 'server']
+  gulp.start ['build-vendor', 'build',  'server']
+  gulp.watch src.sass.files, ['sass']
   gulp.watch src.js, ['js']
   gulp.watch src.css, ['css']

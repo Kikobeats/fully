@@ -47,5 +47,8 @@
     "pretest": "npm run lint",
     "test": "mocha"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp-sass": "~2.3.1"
+  }
 }
