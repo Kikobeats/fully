@@ -1,11 +1,33 @@
+#searchbox {
+  text-align: start;
+}
+
+.textoverlay-wrapper,
+.sbx-custom {
+  width: 100%;
+  max-width: 640px;
+}
+
+.textoverlay {
+  > span {
+    margin-left: -2px;
+    margin-top: 6px;
+    padding: 2px 1.5px;
+    display: inline-block;
+  }
+}
+
 .sbx-custom {
   display: inline-block;
   position: relative;
-  width: $search-width;
   height: 40px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 16px;
+
+  :focus {
+    background: #fff !important;
+  }
 }
 
 .sbx-custom__wrapper {
@@ -32,6 +54,7 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  word-spacing: 2px;
 }
 
 .sbx-custom__input::-webkit-search-decoration,

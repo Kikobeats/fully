@@ -17,6 +17,9 @@
     "url": "https://github.com/Kikobeats/fully/issues"
   },
   "keywords": [],
+  "dependencies": {
+    "jquery-overlay": "0.0.4"
+  },
   "devDependencies": {
     "browser-sync": "latest",
     "browserify": "latest",
@@ -24,10 +27,12 @@
     "coffeeify": "latest",
     "git-dirty": "latest",
     "gulp": "latest",
+    "gulp-add-src": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
     "gulp-cssmin": "latest",
     "gulp-header": "latest",
+    "gulp-sass": "latest",
     "gulp-shorthand": "latest",
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
@@ -47,8 +52,5 @@
     "pretest": "npm run lint",
     "test": "mocha"
   },
-  "license": "MIT",
-  "dependencies": {
-    "gulp-sass": "~2.3.1"
-  }
+  "license": "MIT"
 }

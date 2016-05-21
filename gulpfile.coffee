@@ -7,6 +7,7 @@ concat      = require 'gulp-concat'
 header      = require 'gulp-header'
 uglify      = require 'gulp-uglify'
 cssmin      = require 'gulp-cssmin'
+addsrc      = require 'gulp-add-src'
 shorthand   = require 'gulp-shorthand'
 pkg         = require './package.json'
 prefix      = require 'gulp-autoprefixer'
@@ -25,7 +26,11 @@ src =
   sass:
     main   : 'dist/vendor/searchbox/searchbox.scss'
     files  : ['dist/vendor/searchbox/**/**']
-  js       : 'src/fully.js'
+
+  js       :
+    main   : 'src/fully.js'
+    vendor : ['node_modules/jquery-overlay/jquery.overlay.js']
+
   css      : 'src/fully.css'
 
 banner = [ "/**"
@@ -44,7 +49,6 @@ gulp.task 'sass', ->
   .pipe prefix()
   .pipe strip
     all: true
-  .pipe shorthand()
   .pipe cssmin()
   .pipe header banner, pkg: pkg
   .pipe gulp.dest 'dist/vendor/searchbox'
@@ -61,7 +65,8 @@ gulp.task 'css', ->
   return
 
 gulp.task 'js', ->
-  gulp.src src.js
+  gulp.src src.js.main
+  .pipe addsrc src.js.vendor
   .pipe concat '' + dist.name + '.js'
   .pipe uglify()
   .pipe header banner, pkg: pkg
@@ -82,5 +87,5 @@ gulp.task 'build-vendor', ['sass']
 gulp.task 'default', ->
   gulp.start ['build-vendor', 'build',  'server']
   gulp.watch src.sass.files, ['sass']
-  gulp.watch src.js, ['js']
+  gulp.watch src.js.main, ['js']
   gulp.watch src.css, ['css']
