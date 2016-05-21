@@ -32,7 +32,7 @@
 
           <form id="searchbox" action="void(0);" novalidate="novalidate" class="searchbox sbx-custom">
             <div role="search" class="sbx-custom__wrapper">
-              <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input">
+              <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input" autofocus>
               <button type="submit" title="Submit your search query." class="sbx-custom__submit">
                 <svg role="img" aria-label="Search">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-search-3"></use>
@@ -205,7 +205,7 @@
     $('input').overlay([{
       match: /\w+:\B/g,
       css: {
-        'background': '-webkit-gradient(linear,left bottom,left top,color-stop(0,#ffebaa),color-stop(1,#fff9dc))',
+        'background-color': '#ffebaa',
         'border': '1px solid #ffdcb2',
         'border-color': '#ffdcb2',
         'border-right': '1px',
@@ -215,7 +215,7 @@
     }, {
       match: /\w+:\w+/g,
       css: {
-        'background': '-webkit-gradient(linear,left bottom,left top,color-stop(0,#ccecdf),color-stop(1,#e9f6f1))',
+        'background-color': '#ccecdf',
         'border': '1px solid #8cd5b7',
         'border-radius': '5px'
       }
