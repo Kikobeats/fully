@@ -44,7 +44,7 @@
                 </svg>
               </button>
             </div>
-            <div class="popover_menu popover_search_menu showing_header" id="search_autocomplete_popover"><span class="arrow"></span><span class="arrow_shadow"></span>
+            <div class="popover_menu popover_search_menu showing_header hidden" id="search_autocomplete_popover"><span class="arrow"></span><span class="arrow_shadow"></span>
               <div id="autocomplete_menu" class="content search_menu">
                 <div class="autocomplete_calendar hidden">
                   <div class="pickmeup pmu-view-days" style="position: relative; display: inline-block;">
@@ -202,24 +202,15 @@
   <script src="dist/vendor/jquery/jquery.min.js" charset="utf-8"></script>
   <script src="dist/fully.js" charset="utf-8"></script>
   <script>
-    $('input').overlay([{
-      match: /\w+:\B/g,
-      css: {
-        'background-color': '#ffebaa',
-        'border': '1px solid #ffdcb2',
-        'border-color': '#ffdcb2',
-        'border-right': '1px',
-        'border-top-left-radius': '5px',
-        'border-bottom-left-radius': '5px'
-      }
-    }, {
-      match: /\w+:\w+/g,
-      css: {
-        'background-color': '#ccecdf',
-        'border': '1px solid #8cd5b7',
-        'border-radius': '5px'
-      }
-    }]);
+    var autocomplete = $('#search_autocomplete_popover')
+
+    function toggletAutocomplete() {
+      autocomplete.toggleClass('hidden')
+    }
+    // $('input').focusin(toggletAutocomplete)
+    // $('input').focusout(toggletAutocomplete)
+    toggletAutocomplete();
+    $('input').fully()
   </script>
 
 </body>
