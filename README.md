@@ -1,5 +1,7 @@
 # fully
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/fully.svg)](https://greenkeeper.io/)
+
 <p align="center">
   <br>
   <img src="https://i.imgur.com/Mh13XWB.gif" alt="fully">
