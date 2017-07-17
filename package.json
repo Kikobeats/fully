@@ -18,7 +18,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "jquery-overlay": "0.0.4"
+    "jquery-overlay": "0.0.5"
   },
   "devDependencies": {
     "browser-sync": "latest",
